@@ -1,0 +1,23 @@
+<h2>Thanh trượt phạm vi tùy chỉnh</h2>
+<h4>Kéo thanh trượt để hiển thị giá trị hiện tại</h4>
+<div class="slidecontainer">
+    <input type="range" min="1" max="50" value="1" class="slider" id="myRange">
+</div>
+
+<script>
+    var slider = document.getElementById("myRange");
+    
+    // Hiển thị giá trị thanh trượt mặc định
+    output.innerHTML = slider.value;
+    //Cập nhật giá trị thanh trượt hiện tại (mỗi khi bạn kéo tay cầm thanh trượt)
+    slider.oninput = function () {
+        if (this.value == this.max) {
+            slider.disabled = true;
+          
+        } else {
+            slider.disabled = false;
+ 
+        }
+
+    }
+</script>

@@ -1,0 +1,1217 @@
+/* Các kiểu tùy chỉnh cho menu */
+.navbar-nav .nav-link {
+    color: white;
+    /* Đổi màu chữ thành trắng */
+    font-weight: 600;
+    /* Làm chữ dày hơn */
+}
+
+.navbar-custom .navbar-brand {
+    color: white;
+    /* Đổi màu chữ thành trắng */
+    font-weight: 600;
+}
+
+.navbar-custom .nav-link {
+    color: white;
+    /* Đổi màu chữ thành trắng */
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-custom .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.banner2 {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.banner i {
+    margin-right: 5px;
+}
+
+.orange-button {
+    background-color: orange;
+    color: white;
+    padding: 7px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.orange-button i {
+    margin-right: 10px;
+}
+
+.orange-button span {
+    margin-right: 30px;
+}
+
+.country {
+    display: block;
+}
+
+/* Thêm kiểu tùy chỉnh cho nền trang web */
+.page-container {
+    background-image: url("./image/Blue White Corporate Best Business Banner.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+    padding: 20px;
+    height: auto !important;
+    padding-bottom: 5%;
+}
+.custom-container {
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    top: 40px;
+}
+.custom-container .a-link {
+    color: white;
+    /* Đổi màu chữ thành trắng */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: larger;
+}
+.custom-container .p-header {
+    color: white;
+    /* Đổi màu chữ thành trắng */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 40px;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.custom-container {
+    position: relative;
+}
+.custom-container .search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.custom-container .search-input {
+    width: 50%;
+    padding: 5px 10px;
+    border-radius: 30px; /* Tăng bán kính để bo tròn ô nhập liệu */
+    border: 1px solid #ccc;
+    outline: none;
+    height: 50px;
+}
+
+.custom-container .search-button {
+    padding: 5px 10px;
+    border-radius: 30px; /* Tăng bán kính để bo tròn nút */
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: -100px;
+    height: 40px;
+    width: 95px;
+}
+.custom-container .regular-text {
+    margin-top: 20px;
+}
+.regular-text-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* khoảng cách giữa các item, có thể tùy chỉnh nếu muốn */
+}
+
+.regular-text-container .searchfrequent {
+    border: 1px solid #fffcfc; /* tạo khung màu đen có độ rộng 1px */
+    padding: 10px; /* tạo khoảng trống bên trong khung */
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.custom-container .camerasearch {
+    color: black !important;
+    margin-left: -130px;
+    font-size: x-large;
+}
+.regular-text-container .searchfrequent:hover {
+    background-color: #464649; /* Đổi màu nền khi di chuột qua */
+    color: #e9edf1; /* Đổi màu chữ khi di chuột qua */
+}
+
+.safe {
+    background-color: #3a190b; /* Màu nền nâu cho container */
+    padding: 1rem;
+    padding-bottom: 3%;
+    padding-top: 3%;
+}
+
+.custom-card {
+    margin-bottom: 15%;
+    background-color: #402013; /* Màu trong suốt cho card */
+    border-radius: 10px; /* Góc bo tròn */
+    overflow: hidden; /* Loại bỏ viền tròn bên ngoài nội dung */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    height: 100%; /* Đặt chiều cao của card là 100% */
+    width: 95%;
+}
+
+.custom-card .card-body {
+    padding: 1rem;
+    color: white;
+}
+
+.custom-card:hover {
+    background-color: #47291c;
+}
+.custom-card .card-body i {
+    color: rgb(206, 198, 198);
+    font-size: xx-large;
+    padding: 10px;
+}
+.custom-card .card-title {
+    padding-left: 10px;
+    padding-top: 20px;
+    font-size: x-large;
+}
+.custom-card.card-text {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.custom-card .card-body i:hover {
+    color: rgb(199, 120, 45);
+}
+.container-introduce {
+    margin-top: 70px;
+}
+.inline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inline p {
+    margin: 0;
+    color: #ff6600;
+    font-size: xx-large;
+    font-weight: 600;
+}
+.inline span {
+    margin: 0;
+    color: #000000;
+    font-size: medium;
+}
+.container-introduce .display-6 {
+    font-weight: 600;
+}
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    width: 100%;
+    border-radius: 50px;
+    padding: 10px;
+    position: relative;
+    padding-bottom: 5%;
+}
+
+.category-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.category-list li {
+    margin: 15px;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-slider .btn-prev,
+.btn-next {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f4f4;
+    outline: none;
+    border: 1px solid #979797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-slider .btn-prev {
+    position: absolute;
+    left: 0;
+}
+
+.category-slider .btn-next {
+    position: absolute;
+    right: 0;
+}
+.category-slider .btn-prev,
+.btn-next :hover {
+    background-color: #979797;
+}
+.category-list li {
+    display: flex;
+    flex-direction: column; /* Sử dụng flex-direction để hiển thị các phần tử theo hướng dọc */
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
+
+.category-list li img {
+    margin-bottom: 5px; /* Khoảng cách giữa ảnh và đoạn văn */
+}
+
+.category-list li p {
+    font-size: 12px; /* Kích thước chữ nhỏ hơn */
+}
+.discover {
+    padding-top: 5%; /* Padding phía trên của container-discover */
+    padding-bottom: 5%; /* Padding phía dưới của container-discover */
+    background-color: #f4f4f4; /* Màu nền của container-discover */
+}
+
+.container-discover .card {
+    height: 400px;
+    height: 600px;
+    border-radius: 30px;
+}
+.container-discover .card img {
+    border-radius: 30px;
+}
+
+.container-discover .card-title {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.container-discover .card-text {
+    padding-left: 20px;
+}
+
+.container-discover .card-text-point {
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 30px;
+    width: fit-content;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin-left: 20px;
+    box-shadow: 0 0 5px rgba(224, 222, 222, 0.2);
+    position: relative; /* Đảm bảo vị trí tương đối cho phần tử */
+    z-index: 1; /* Đặt thẻ p lên trên */
+}
+
+.container-discover .card .img-discover {
+    display: flex;
+    background-attachment: fixed;
+    background-color: #ccc;
+    margin-top: -60px;
+    position: relative; /* Đảm bảo vị trí tương đối cho phần tử */
+    z-index: 0; /* Đảm bảo thẻ img ở dưới thẻ p */
+}
+.container-discover .card .img-mini {
+    margin-top: -10px;
+    position: relative;
+}
+
+.container-discover .img-mini-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.container-discover .img-mini-text-img-1 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.container-discover .img-mini-text-img-1 .card-title {
+    margin-top: -130px;
+    margin-bottom: 0.5rem;
+    margin-left: 130px;
+}
+
+.container-discover .img-mini-text-img-1 .card-text {
+    margin-bottom: 0.5rem;
+    margin-left: 130px;
+    padding-bottom: 0.5rem;
+}
+
+.container-discover .rack-extra p {
+    text-align: left; /* căn văn bản về bên trái */
+    padding: 10px;
+    display: flex;
+    position: relative;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+.container-discover .rack-extra a {
+    margin-top: -50px;
+    float: inline-end;
+    left: -30px;
+    position: relative;
+    color: #000000;
+}
+
+.supply {
+    padding-top: 5%; /* Padding phía trên của container-discover */
+    padding-bottom: 5%; /* Padding phía dưới của container-discover */
+}
+.supply .card-supply {
+    padding: 30px;
+    border-radius: 30px;
+}
+.supply .card-supply img {
+    border-radius: 30px;
+}
+.supply .card-title {
+    padding: 40px;
+    margin-top: -400px;
+    color: white;
+}
+.supply .card-text {
+    padding: 40px;
+    margin-top: 200px;
+    color: white;
+    font-weight: 400;
+}
+.supply .card-text a {
+    color: white;
+}
+.video-trangchu {
+    background-image: url("./image/Thiết\ kế\ chưa\ có\ tên.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+    padding: 20px;
+    height: auto !important;
+    padding-bottom: 5%;
+}
+.video-trangchu .display-4 {
+    color: #e9edf1;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 60px;
+    word-wrap: break-word;
+}
+.video-trangchu .card {
+    width: 604px;
+    height: 396px;
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 50px;
+    position: relative;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.video-trangchu .card-title {
+    color: white;
+    margin-top: -10px;
+    padding-bottom: 20px;
+}
+.video-trangchu img {
+    height: 80px;
+    width: 400px;
+    padding-bottom: 20px;
+}
+.video-trangchu .card-text {
+    color: white;
+}
+
+.video-trangchu a {
+    color: #ffffff;
+    padding-top: 20px;
+}
+.video-trangchu .watch-video {
+    text-align: center;
+    padding-right: 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.11);
+    color: white;
+    padding: 7px;
+    border-radius: 50px;
+    display: inline-block;
+}
+.video-trangchu .watch-video:hover {
+    background-color: rgba(61, 57, 57, 0.11);
+}
+
+.hienthi_container {
+    padding: 5%;
+}
+
+.hienthi_container h1 {
+    padding-bottom: 5%;
+    word-wrap: break-word;
+}
+
+.hienthi-all {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slider-hienthi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    order: 2;
+}
+
+.slider-hienthi .slide {
+    order: 1;
+}
+
+.slider-hienthi .slide img {
+    order: 2;
+    float: right;
+    width: 690px;
+    height: 530px;
+}
+
+.slider-chuyendong {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    float: left;
+    order: 1;
+    justify-content: flex-end;
+}
+
+.slider-chuyendong .button-text {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    white-space: nowrap;
+}
+.slider-chuyendong .button-text button {
+    height: 50px;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: #979797 solid 1px;
+}
+.slider-chuyendong .button-text i {
+    font-size: x-large;
+    width: 50;
+    padding: 5px;
+    border: none !important;
+}
+
+.slider-chuyendong span {
+    margin-left: 10px;
+    display: inline-block;
+    color: #51200b;
+    font-size: x-large;
+}
+.slider-chuyendong .button-text button:hover {
+    background-color: #ffefe5;
+    transition: background-color 0.3s ease;
+    border: none !important;
+}
+.slider-chuyendong .button-text i:hover {
+    color: #f9680d;
+}
+.slider-chuyendong span {
+    margin-left: 10px;
+    display: inline-block;
+    color: #51200b;
+}
+.slider-chuyendong span:hover {
+    margin-left: 10px;
+    display: inline-block;
+    color: #51200b;
+    font-size: xx-large;
+    transition: color 0.3s ease;
+}
+
+.caunoihay {
+    padding-top: 5%;
+    background-color: #f7f2f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.caunoihay h1,
+.caunoihay p {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.caunoihay a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    padding-bottom: 5%;
+}
+.caunoihay h1 {
+    color: #51200b;
+}
+.caunoihay p {
+    color: #979797;
+}
+
+.caunoihay .character-caunoi img {
+    height: 178px;
+    width: 178px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.caunoihay .character-caunoi .card {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    display: flex;
+}
+
+.dangky h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #e9edf1;
+}
+.dangky p {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #e9edf1;
+}
+.dangky a {
+    text-align: center;
+    color: #e9edf1;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: orange;
+    padding: 7px;
+    display: inline-flex; /* Thay đổi giá trị display thành 'inline-flex' */
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.dangky .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #e9edf1;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.dangky {
+    background-color: #51200b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.hotro-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotro-container h1,
+.hotro-container p {
+    margin-bottom: 20px;
+}
+
+.hotro-container h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #51200b;
+}
+
+.hotro-container p {
+    color: #464649;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.hotro-container .card1 {
+    margin-top: 5%;
+    height: 550px;
+    width: 630px;
+    border-radius: 50px;
+    background-image: url("./image/Blue White Corporate Best Business Banner.png");
+}
+
+.hotro-container .card1 .card-title {
+    color: orange;
+    padding: 5%;
+    font-size: larger;
+    margin-top: 60%;
+    float: left;
+}
+
+.hotro-container .card1 .card-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-55%, -30%);
+    font-size: x-large;
+    color: #e9edf1;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.hotro-container .card2 {
+    margin-top: 5%;
+    height: 270px;
+    width: 630px;
+    border-radius: 50px;
+    background-image: url("./image/Blue White Corporate Best Business Banner.png");
+}
+
+.hotro-container .card3 {
+    height: 270px;
+    width: 630px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-image: url("./image/Blue White Corporate Best Business Banner.png");
+}
+
+.hotro-container .card2 .card-title,
+.hotro-container .card3 .card-title {
+    color: orange;
+    float: left;
+    margin-top: 25%;
+    margin-left: 5%;
+}
+
+.hotro-container .card2 .card-text {
+    color: #e9edf1;
+    margin-top: 30%;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-59%, 35%);
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.hotro-container .card3 .card-text {
+    color: #e9edf1;
+    margin-top: 30%;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-51%, 35%);
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.country-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3%;
+}
+
+.country-container h1 {
+    margin-right: auto;
+    font-size: xx-large;
+}
+
+.country-container a {
+    margin-left: auto;
+    color: #000000;
+}
+
+.country-slider .btn-prev,
+.btn-next {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f4f4;
+    outline: none;
+    border: 1px solid #979797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-slider .btn-prev {
+    position: absolute;
+    left: 0;
+}
+
+.category-slider .btn-next {
+    position: absolute;
+    right: 0;
+}
+.country-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.country-list {
+    display: flex;
+    flex-direction: row; /* Để các li nằm theo chiều ngang */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto; /* Cho phép cuộn ngang khi nội dung quá dài */
+}
+
+.country-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+.country-list img {
+    width: 50px;
+    height: 50px;
+}
+
+.country-list p {
+    margin-top: 5px;
+    text-align: center;
+}
+.footer1 .col a {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+    font-size: small;
+}
+
+.footer1 .col a:hover {
+    text-decoration: underline;
+}
+.footer1 .col strong {
+    font-size: medium;
+}
+.footer1 {
+    padding-bottom: 5%;
+}
+
+.footer2 .col {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.footer2 .col i {
+    margin-right: 15px;
+    font-size: x-large;
+    color: #464649;
+}
+
+.footer2 .col p {
+    flex-grow: 1;
+    margin: 0;
+    white-space: nowrap; /* Để loại bỏ lề mặc định của thẻ p */
+    color: #000;
+}
+
+.footer2 .col img {
+    margin-left: 10px;
+}
+.footer2 .col a {
+    color: #000;
+}
+.footer3 {
+    padding-top: 1%;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer3 p {
+    white-space: nowrap;
+    font-size: medium;
+    color: #464649;
+    font-size: 14px;
+}
+.footer3 a {
+    font-size: 14px;
+    color: #464649;
+    text-decoration: none;
+}
+.footer3 a:hover {
+    text-decoration: underline;
+}
+
+#navbar-hidden {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+}
+#navbar-hidden a {
+    color: #000;
+}
+#navbar-hidden .search-hidden {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-hidden .search-input {
+    width: 570px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+#navbar-hidden .search-hidden button {
+    padding: 8px 12px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: -12%;
+    border-radius: 30px;
+}
+
+#navbar-hidden .camerasearch {
+    margin-left: -18%;
+    color: #ff9800;
+    cursor: pointer;
+}
+
+.header-register {
+    padding: 3%;
+    white-space: nowrap;
+}
+.header-register select {
+    color: #727277;
+    margin-left: 10px;
+    font-size: medium;
+}
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.register form div {
+    width: 100%;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.register form label {
+    display: inline-block;
+    width: 150px;
+    font-size: 14px;
+}
+.register form input,
+.register form select {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.register form button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.register form button:hover {
+    background-color: #f57c00;
+}
+.register .checkbox-group {
+    display: flex;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+.register .checkbox-group .inline-label {
+    display: inline-flex;
+    align-items: center;
+}
+.register .checkbox-group .inline-label input[type="checkbox"] {
+    margin-top: -0.5px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    margin-right: 5px;
+}
+.register .first-name {
+    width: 24%;
+}
+.register .last-name {
+    width: 25%;
+}
+.register .tel {
+    width: 10%;
+}
+.register .area {
+    width: 10%;
+}
+.register .phone-number {
+    width: 26%;
+}
+
+.verify input[type="range"] {
+    height: 40px; /* Thiết lập chiều cao của input */
+    -webkit-appearance: none; /* Loại bỏ mặc định của giao diện của trình duyệt */
+    width: 50%; /* Đảm bảo input mở rộng đầy đủ chiều ngang */
+    background: #d3d3d3; /* Màu nền của thanh trượt */
+    outline: none; /* Loại bỏ đường viền khi được focus */
+    opacity: 0.7; /* Độ mờ của input */
+    -webkit-transition: 0.2s; /* Hiệu ứng chuyển đổi */
+    transition: opacity 0.2s;
+    border-radius: 5px; /* Bo tròn góc */
+}
+
+.verify input[type="range"]:hover {
+    opacity: 1; /* Tăng độ mờ khi di chuột vào */
+}
+
+.verify input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Loại bỏ mặc định của giao diện của trình duyệt */
+    appearance: none;
+    width: 40px; /* Chiều rộng của nút trượt */
+    height: 40px; /* Chiều cao của nút trượt */
+    background: #ebe4e4; /* Màu của nút trượt */
+    cursor: pointer; /* Con trỏ chuột khi di chuyển qua nút trượt */
+    border: rgb(95, 94, 94) solid 1px;
+    box-shadow: #979797;
+}
+
+.verify {
+    display: flex;
+    align-items: center;
+}
+.agree-container {
+    display: flex;
+    align-items: start;
+}
+
+.agree-container input[type="checkbox"] {
+    margin-right: -22%;
+}
+.agree-container label {
+    word-wrap: break-word;
+}
+
+.login {
+    padding-top: 2%;
+    background-image: url("./image/Blue White Corporate Best Business Banner.png");
+    padding-bottom: 5%;
+}
+.login .container {
+    display: flex;
+    justify-content: flex-end;
+}
+.login .form-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.login .input-group label {
+    flex: 1;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.login .input-group a {
+    margin-left: 10px;
+    font-size: small;
+    text-decoration: none;
+    color: #000;
+}
+.login .input-group a:hover {
+    color: #222cbe;
+}
+.login label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: small;
+
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: small;
+}
+
+.login .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.login .checkbox-group label {
+    margin-left: 10px;
+    white-space: nowrap;
+    
+}
+
+.login .checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+.login .button-group {
+    text-align: center;
+}
+
+.login .button-group button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    color: white;
+    background-color: orange;
+}
+.login .divider {
+    margin: 10px 0;
+    text-align: center;
+    
+}
+.login .divider::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid rgb(88, 88, 92);
+    margin-top: 10px;
+    padding-bottom: 10% ;
+}
+
+.login .divider a {
+    display: inline-block;
+    font-size: small;
+    color: blue;
+    text-decoration: none;
+    
+}
+.login .divider a:first-child {
+    float: left;
+}
+.login .divider a:last-child {
+    float: right;
+}
+
+.login.social-login {
+    text-align: center;
+}
+.login .social-login span {
+    font-size: small;
+}
+
+.login .social-login a {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.login .social-login a img {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.login.other-options {
+    text-align: center;
+}

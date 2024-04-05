@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Menu Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+      <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
+      <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+      <link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+
+</head>
+<style>
+</style>
+
+<body>
+    <header>
+        <div class="menuhahaha">
+            <nav class="navbar navbar-expand-lg navbar-custom" id="navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><img src="https://via.placeholder.com/100x50" alt=""></a>
+                    <div class="search-hidden">
+                        <input type="text" class="search-input" maxlength="50">
+                        <button class="search-hidden"> Tìm kiếm</button>
+                        <i class="bi bi-camera camerasearch"></i>
+                    </div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="banner">
+                                    <i class="fas fa-globe"></i>
+                                    <span>Giao hàng đến : <span class="country"><img src="./image/iconvn.png"
+                                                style="width: 25px; height: 15px;" alt=""> VN</span></span>
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="banner">
+                                    <i class="fas fa-globe"></i>
+                                    <span><i class="bi bi-globe"></i></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <div class="banner">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    <span><i class="bi bi-person"></i> Đăng nhập</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link orange-button" href="#">
+                                <div class="banner ">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span>Đăng ký</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" color=""><i class="bi bi-list-task"></i> Tất cả danh
+                                    mục</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Lựa chọn nổi bật</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Trade Assurance</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Thành viên Alibaba.com</a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <div class="banner">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Trung tâm Người mua</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <div class="banner">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        <span>Tải ứng dụng</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <div class="banner">
+                                        <i class="fas fa-user-plus"></i>
+                                        <span>Trở thành nhà cung cấp</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+   <main>
+    <div class="cart-section">
+        <!-- Start Cart Table -->
+        <div class="cart-table-wrapper" data-aos="fade-up" data-aos-delay="0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_desc">
+                            <div class="table_page table-responsive">
+                                <table>
+                                    <!-- Start Cart Table Head -->
+                                    <thead>
+                                        <tr>
+                                            <th class="product_remove">Delete</th>
+                                            <th class="product_thumb">Image</th>
+                                            <th class="product_name">Product</th>
+                                            <th class="product-price">Price</th>
+                                            <th class="product_quantity">Quantity</th>
+                                            <th class="product_total">Total</th>
+                                        </tr>
+                                    </thead> <!-- End Cart Table Head -->
+                                    <tbody>
+                                        <!-- Start Cart Single Item-->
+                                        <tr>
+                                            <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
+                                            </td>
+                                            <td class="product_thumb"><a href="product-details-default.html"><img
+                                                        src="assets/images/product/default/home-1/default-1.jpg"
+                                                        alt=""></a></td>
+                                            <td class="product_name"><a href="product-details-default.html">Handbag
+                                                    fringilla</a></td>
+                                            <td class="product-price">$65.00</td>
+                                            <td class="product_quantity"><label>Quantity</label> <input min="1"
+                                                    max="100" value="1" type="number"></td>
+                                            <td class="product_total">$130.00</td>
+                                        </tr> <!-- End Cart Single Item-->
+                                        <!-- Start Cart Single Item-->
+                                        <tr>
+                                            <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
+                                            </td>
+                                            <td class="product_thumb"><a href="product-details-default.html"><img
+                                                        src="assets/images/product/default/home-1/default-2.jpg"
+                                                        alt=""></a></td>
+                                            <td class="product_name"><a href="product-details-default.html">Handbags
+                                                    justo</a></td>
+                                            <td class="product-price">$90.00</td>
+                                            <td class="product_quantity"><label>Quantity</label> <input min="1"
+                                                    max="100" value="1" type="number"></td>
+                                            <td class="product_total">$180.00</td>
+                                        </tr> <!-- End Cart Single Item-->
+                                        <!-- Start Cart Single Item-->
+                                        <tr>
+                                            <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a>
+                                            </td>
+                                            <td class="product_thumb"><a href="product-details-default.html"><img
+                                                        src="assets/images/product/default/home-1/default-3.jpg"
+                                                        alt=""></a></td>
+                                            <td class="product_name"><a href="product-details-default.html">Handbag
+                                                    elit</a></td>
+                                            <td class="product-price">$80.00</td>
+                                            <td class="product_quantity"><label>Quantity</label> <input min="1"
+                                                    max="100" value="1" type="number"></td>
+                                            <td class="product_total">$160.00</td>
+                                        </tr> <!-- End Cart Single Item-->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cart_submit">
+                                <button class="btn btn-md btn-golden" type="submit">update cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Cart Table -->
+
+        <!-- Start Coupon Start -->
+        <div class="coupon_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="coupon_code left" data-aos="fade-up" data-aos-delay="200">
+                            <h3>Coupon</h3>
+                            <div class="coupon_inner">
+                                <p>Enter your coupon code if you have one.</p>
+                                <input class="mb-2" placeholder="Coupon code" type="text">
+                                <button type="submit" class="btn btn-md btn-golden">Apply coupon</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
+                            <h3>Cart Totals</h3>
+                            <div class="coupon_inner">
+                                <div class="cart_subtotal">
+                                    <p>Subtotal</p>
+                                    <p class="cart_amount">$215.00</p>
+                                </div>
+                                <div class="cart_subtotal ">
+                                    <p>Shipping</p>
+                                    <p class="cart_amount"><span>Flat Rate:</span> $255.00</p>
+                                </div>
+                                <a href="#">Calculate shipping</a>
+
+                                <div class="cart_subtotal">
+                                    <p>Total</p>
+                                    <p class="cart_amount">$215.00</p>
+                                </div>
+                                <div class="checkout_btn">
+                                    <a href="#" class="btn btn-md btn-golden">Proceed to Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End Coupon Start -->
+    </div>
+   </main>
+    <footer>
+        <div class="footer3">
+            <div class="container ">
+                <p><a href="">AliExpress</a> | <a href="">1688.com</a> | <a href="">Tmall Taobao World</a> | <a
+                        href="">Alipay</a> | <a href="">Lazada</a> |<a href="">Taobao Global</a> </p>
+                <p><a href="">Chính sách và quy tắc</a> - <a href="">Thông báo pháp lý
+                    </a> - <a href="">Chính sách về danh sách sản phẩm</a> - <a href="">Bảo vệ tài sản trí tuệ
+                    </a> - <a href="">Chính sách Quyền riêng tư
+                    </a> -<a href="">Điều khoản Sử dụng</a> - <a href="">Tuân thủ tính chính trực</a></p>
+                <p>© 1999-2024 hahahahahah.com. Đã bảo lưu mọi quyền.
+                    浙公网安备 33010002000092号
+                    浙B2-20120091-4</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+    <script src="assets/js/vendor/vendor.min.js"></script>
+    <script src="assets/js/plugins/plugins.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+</html>

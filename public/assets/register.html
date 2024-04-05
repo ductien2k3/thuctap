@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="header-register">
+                <img src="https://via.placeholder.com/100x50" alt="">
+                <select name="" id="">
+                    <option value="">English</option>
+                    <option value="">Việt Nam</option>
+                    <option value="">Trung Quốc</option>
+                </select>
+            </div>
+            <div class="register">
+                <form>
+                    <div>
+                        <label for="country">Country/Region:</label>
+                        <select id="country" name="country">
+                            <option value="Vietnam">Vietnam</option>
+                            <!-- Thêm các tùy chọn khác tại đây nếu cần -->
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Please select trade role:</label>
+                        <div class="checkbox-group">
+                            <label class="inline-label" for="buyer">
+                                <input type="checkbox" id="buyer" name="role" value="Buyer">
+                                Buyer
+                            </label>
+                            <label class="inline-label" for="seller">
+                                <input type="checkbox" id="seller" name="role" value="Seller">
+                                Seller
+                            </label>
+                            <label class="inline-label" for="both">
+                                <input type="checkbox" id="both" name="role" value="Both">
+                                Both
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="Please set the email as the login name." required>
+                    </div>
+
+                    <div>
+                        <label for="password">Login Password:</label>
+                        <input type="password" id="password" name="password"
+                            placeholder="Please set the login password." required>
+                    </div>
+
+                    <div>
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password"
+                            placeholder="Enter the login password again" required>
+                    </div>
+
+                    <div>
+                        <label for="company-name">Company Name:</label>
+                        <input type="text" id="company-name" name="company-name"
+                            placeholder="Please enter your company name" required>
+                    </div>
+
+                    <div>
+                        <label for="full-name">Full name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Please enter your first name"
+                            required class="first-name">
+                        <input type="text" id="last-name" name="last-name" placeholder="Please enter your last name"
+                            required class="last-name">
+                    </div>
+
+                    <div>
+                        <label for="tel">Tel:</label>
+                        <input type="tel" id="tel" name="tel" required placeholder="84" class="tel"> -
+                        <input type="text" id="area" name="area" required placeholder="area" class="area"> -
+                        <input type="tel" id="phone-number" name="phone-number" required placeholder="phone number"
+                            class="phone-number">
+                    </div>
+
+                    <div class="verify">
+                        <label for="verify">Verify: </label>
+                        <input type="range" min="0" max="100" value="1" class="slider-verify" id="myRange" placeholder="Please slide to verify">
+                    </div>
+
+                    <div class="agree-container">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree" class="">I agree to (a) <a href="">Free Membership Agreement</a>, <br>
+                            (b) <a href="">Terms of Use</a>, and (c) <a href="">Privacy Policy</a>. I agree to <br>
+                            receive more information from Alibaba.com <br>
+                            about its products and services.</label>
+                    </div>
+
+                    <button type="submit">Agree and Register</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer3">
+            <div class="container ">
+                <p><a href="">AliExpress</a> | <a href="">1688.com</a> | <a href="">Tmall Taobao World</a> | <a
+                        href="">Alipay</a> | <a href="">Lazada</a> |<a href="">Taobao Global</a> </p>
+                <p><a href="">Chính sách và quy tắc</a> - <a href="">Thông báo pháp lý
+                    </a> - <a href="">Chính sách về danh sách sản phẩm</a> - <a href="">Bảo vệ tài sản trí tuệ
+                    </a> - <a href="">Chính sách Quyền riêng tư
+                    </a> -<a href="">Điều khoản Sử dụng</a> - <a href="">Tuân thủ tính chính trực</a></p>
+                <p>© 1999-2024 hahahahahah.com. Đã bảo lưu mọi quyền.
+                    浙公网安备 33010002000092号
+                    浙B2-20120091-4</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
