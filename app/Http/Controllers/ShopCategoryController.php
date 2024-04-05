@@ -7,6 +7,7 @@ use App\Models\Shop;
 use App\Models\Shop_category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class ShopCategoryController extends Controller
 {
@@ -20,8 +21,13 @@ class ShopCategoryController extends Controller
 
     public function index()
     {
+        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
 
-        $data = Shop_category::with('shop')->latest('id')->paginate(5);
+        $data = Shop_category::with('shop')
+            ->where('shop_id', $shopId) // Chỉ lấy các danh mục của cửa hàng hiện tại
+            ->latest('id')
+            ->paginate(5);
+
         return view('client.shop.categories.index', compact('data'));
     }
 
@@ -43,11 +49,15 @@ class ShopCategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
+
         $data = $request->except('image');
         if ($request->hasFile('image')) {
             $pathFile = Storage::putFile('shop_category', $request->file('image'));
             $data['image'] = 'storage/' . $pathFile;
         }
+
+        $data['shop_id'] = $shopId; // Gán ID của cửa hàng hiện tại vào trường 'shop_id'
 
         Shop_category::query()->create($data);
         return redirect()->route('categories.index');
@@ -56,29 +66,36 @@ class ShopCategoryController extends Controller
     /**
      * Display the specified resource.
      */
+    /**
+     * Hiển thị thông tin danh mục.
+     */
     public function show($id)
     {
+        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
         $defaultShopId = Shop::query()->value('id');
-        $shop_category = Shop_category::find($id);
+        $shop_category = Shop_category::where('shop_id', $shopId)->findOrFail($id);
         return view('client.shop.categories.show', compact('shop_category', 'defaultShopId'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Hiển thị form chỉnh sửa danh mục.
      */
     public function edit($id)
     {
+        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
         $defaultShopId = Shop::query()->value('id');
-        $shop_category = Shop_category::find($id);
+        $shop_category = Shop_category::where('shop_id', $shopId)->findOrFail($id);
         return view('client.shop.categories.edit', compact('defaultShopId', 'shop_category'));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Cập nhật thông tin danh mục.
      */
     public function update(Request $request, $id)
     {
-        $shop_category = Shop_category::find($id);
+        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
+        $shop_category = Shop_category::where('shop_id', $shopId)->findOrFail($id);
+
         $data = $request->except('image');
         if ($request->hasFile('image')) {
             $pathFile = Storage::putFile('products', $request->file('image'));
@@ -94,11 +111,12 @@ class ShopCategoryController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Xóa danh mục.
      */
     public function destroy($id)
     {
-        $shop_category = Shop_category::find($id);
+        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
+        $shop_category = Shop_category::where('shop_id', $shopId)->findOrFail($id);
         $shop_category->delete();
         if ($shop_category->image && file_exists(public_path($shop_category->image))) {
             unlink(public_path($shop_category->image));
