@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Home;
-use App\Models\Shop_category;
 use Illuminate\Http\Request;
+use App\Models\Shop_category;
+use App\Models\Shop_product;
 
-class HomeController extends Controller
+class ProductViewController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -20,13 +20,14 @@ class HomeController extends Controller
      */
     public function index()
 {
-    $data = Shop_category::latest('id')->get(); // Sử dụng get() để lấy dữ liệu
+    $dataCategory = Shop_category::latest('id')->get();
+    $dataProduct = Shop_product::latest('id')->paginate(5);
 
     // Kiểm tra dữ liệu đã được lấy thành công hay chưa
-    // dd($data);
+    // dd($dataCategory, $dataProduct);
 
-    return view('client.index', compact('data'));
+    return view('client.product', compact('dataCategory', 'dataProduct'));
 }
 
-
+    
 }

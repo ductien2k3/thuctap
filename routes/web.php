@@ -2,9 +2,13 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\myOrderController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductViewController;
 use App\Http\Controllers\ShopCategoryController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ShopProductController;
@@ -36,14 +40,12 @@ Route::resource('/admin/products', ProductController::class);
 Route::resource('/admin/users', UserController::class);
 
 
+Route::resource('/', HomeController::class);
 Route::resource('/home', HomeController::class);
 
 Route::resource('/login', LoginController::class);
 Route::resource('/register', RegisterController::class);
 
-Route::get('/', function () {
-    return view('client.index');
-});
 Auth::routes();
 
 Route::resource('/shop', ShopController::class);
@@ -61,3 +63,13 @@ Route::resource('myshop/products', ShopProductController::class)->names([
     'destroy' => 'myshop.products.destroy',
 ]);
 
+Route::resource('/products', ProductViewController::class);
+
+
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+Route::resource('/cart', CartController::class);
+
+
+Route::resource('/orders', OrderController::class);
+
+Route::resource('/myorders', myOrderController::class);

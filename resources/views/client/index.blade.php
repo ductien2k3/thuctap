@@ -68,6 +68,18 @@
                                             {{ __('Quản lý user') }}
                                         </a>
                                     @endif
+
+                                    @php
+                                        $allowedRoles = ['Seller','Buyer','Both', 'Admin'];
+                                    @endphp
+                                    @if (in_array(Auth::user()->role, $allowedRoles))
+                                        <a class="dropdown-item" href="{{ route('cart.index') }}">
+                                            {{ __('Giỏ hàng') }}
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('myorders.index') }}">
+                                            {{ __('Đơn hàng của tôi') }}
+                                        </a>
+                                    @endif
                                 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -153,6 +165,18 @@
                                         </a>
                                     @endif
 
+                                    
+                                    @php
+                                        $allowedRoles = ['Seller','Buyer','Both', 'Admin'];
+                                    @endphp
+                                    @if (in_array(Auth::user()->role, $allowedRoles))
+                                        <a class="dropdown-item" href="{{ route('cart.index') }}">
+                                            {{ __('Giỏ hàng') }}
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('myorders.index') }}">
+                                            {{ __('Đơn hàng của tôi') }}
+                                        </a>
+                                    @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
@@ -335,66 +359,11 @@
                 < </button>
                     <ul class="category-list" id="category-list">
 
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 1</p>
+                        @foreach ($data as $item)
+                        <li><img src="{{ asset($item->image) }}" style="width: 50px" alt="">
+                            <p>{{ $item->name }}</p>
                         </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 2</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 3</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 4</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 6</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 6</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 7</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 8</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 9</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 10</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 11</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 12</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 13</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 14</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 15</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 16</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 17</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 18</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 19</p>
-                        </li>
-                        <li><img src="https://via.placeholder.com/50x50" alt="Category 1">
-                            <p>Category 20</p>
-                        </li>
+                        @endforeach
                     </ul>
                     <button class="btn btn-next" id="next"> > </button>
         </div>

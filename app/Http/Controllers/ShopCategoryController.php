@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+
 use App\Models\Shop;
 use App\Models\Shop_category;
 use Illuminate\Http\Request;
