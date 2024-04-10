@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\customerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\myOrderController;
 use App\Http\Controllers\OrderController;
@@ -50,6 +51,10 @@ Auth::routes();
 
 Route::resource('/shop', ShopController::class);
 
+Route::resource('/customer', customerController::class);
+
+
+
 Route::resource('myshop/categories', ShopCategoryController::class);
 
 
@@ -67,9 +72,14 @@ Route::resource('/products', ProductViewController::class);
 
 
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+
 Route::resource('/cart', CartController::class);
+Route::put('/cart/update', [CartController::class, 'updateCart'])->name('cart.update');
 
 
 Route::resource('/orders', OrderController::class);
 
 Route::resource('/myorders', myOrderController::class);
+Route::put('/myorders/{order}/cancel', [MyOrderController::class, 'cancel'])->name('myorders.cancel');
+
+

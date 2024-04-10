@@ -67,8 +67,7 @@ class ShopProductController extends Controller
      */
     public function show($id)
     {
-        $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
-        $shop_product = Shop_product::where('shop_id', $shopId)->findOrFail($id);
+        $shop_product = Shop_product::findOrFail($id);
         return view('client.shop.products.show', compact('shop_product'));
     }
 
@@ -79,7 +78,7 @@ class ShopProductController extends Controller
     {
         $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
         $shop_category = Shop_category::where('shop_id', $shopId)->pluck('name', 'id')->all();
-        $shop_product = Shop_product::where('shop_id', $shopId)->findOrFail($id);
+        $shop_product = Shop_product::findOrFail($id);
         return view('client.shop.products.edit', compact('shop_product', 'shop_category'));
     }
 
@@ -89,7 +88,7 @@ class ShopProductController extends Controller
     public function update(Request $request, $id)
     {
         $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
-        $shop_product = Shop_product::where('shop_id', $shopId)->findOrFail($id);
+        $shop_product = Shop_product::findOrFail($id);
 
         $data = $request->except('image');
         if ($request->hasFile('image')) {
@@ -111,7 +110,7 @@ class ShopProductController extends Controller
     public function destroy($id)
     {
         $shopId = Auth::user()->shop->id; // Lấy ID của cửa hàng hiện tại
-        $shop_product = Shop_product::where('shop_id', $shopId)->findOrFail($id);
+        $shop_product = Shop_product::findOrFail($id);
         $shop_product->delete();
         if ($shop_product->image && file_exists(public_path($shop_product->image))) {
             unlink(public_path($shop_product->image));

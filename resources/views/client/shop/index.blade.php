@@ -29,11 +29,14 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('myshop.products.index') }}">Sản phẩm</a>
-                    </li <li class="nav-item">
-
-                    <a class="nav-link" href="{{ route('shop.edit', $shop->id) }}">Cập nhật cửa hàng</a>
-
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('shop.edit', $shop->id) }}">Cập nhật cửa hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('customer.index') }}">Đơn Hàng</a>
+                    </li>
+                    
                 @endif
             </ul>
         </div>

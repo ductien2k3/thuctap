@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\CartItem;
 use Illuminate\Http\Request;
 use App\Models\Shop_product;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class CartController extends Controller
 {
@@ -57,14 +58,13 @@ class CartController extends Controller
         foreach ($cartItems as $item) {
             $total += $item->shop_product->price * $item->quantity;
         }
-
         // Chuyển tới view cart.index với các mục giỏ hàng và chi phí tổng cộng
         return view('client.cart', ['items' => $cartItems, 'total' => $total]);
     }
     public function removeCartItem()
-{
-    $this->where('user_id', auth()->id())->delete();
-}
+    {
+        $this->where('user_id', auth()->id())->delete();
+    }
 
 
     /**
@@ -102,11 +102,31 @@ class CartController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    // app/Http/Controllers/CartController.php
+
     public function update(Request $request)
-    {
-        //
+{
+    // Lấy ID và số lượng từ request
+    $id = $request->input('id');
+    $quantity = $request->input('quantity');
+
+    // Kiểm tra xem giỏ hàng có tồn tại không
+    $cartItem = CartItem::find($id);
+    if (!$cartItem) {
+        return redirect()->back()->with('error', 'Cart item not found');
     }
 
+    // Cập nhật số lượng của giỏ hàng
+    $cartItem->quantity = $quantity;
+    $cartItem->save();
+
+    // Lưu số lượng mới vào session
+    session(['quantity_' . $id => $quantity]);
+
+    // Chuyển hướng người dùng trở lại trang giỏ hàng với thông báo thành công
+    return redirect()->route('cart.index')->with('success', 'Cart item updated successfully');
+}
+    
     /**
      * Remove the specified resource from storage.
      */
@@ -116,17 +136,17 @@ class CartController extends Controller
         if (!auth()->check()) {
             return redirect()->route('login')->with('error', 'Please login to manage your cart');
         }
-    
+
         // Kiểm tra xem sản phẩm có tồn tại trong giỏ hàng hay không
         $cartItem = CartItem::where('user_id', auth()->user()->id)->where('id', $id)->first();
         if (!$cartItem) {
             // Xử lý khi sản phẩm không tồn tại trong giỏ hàng
             return redirect()->back()->with('error', 'Product not found in cart');
         }
-    
+
         // Xoá sản phẩm khỏi giỏ hàng
         $cartItem->delete();
-    
+
         // Chuyển hướng người dùng trở lại trang giỏ hàng với thông báo thành công
         return redirect()->route('cart.index')->with('success', 'Product removed from cart');
     }

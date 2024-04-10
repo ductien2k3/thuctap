@@ -23,7 +23,15 @@ class Order extends Model
 
     ];
     public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+    public function shop_products()
+    {
+        return $this->belongsToMany(Shop_product::class, 'order_product', 'order_id', 'product_id')->withPivot('quantity');
+    }
+    public function shop()
 {
-    return $this->belongsTo(User::class, 'user_id');
+    return $this->belongsTo(Shop::class, 'shop_id');
 }
 }

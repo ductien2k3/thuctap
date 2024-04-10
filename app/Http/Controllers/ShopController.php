@@ -53,7 +53,6 @@ class ShopController extends Controller
      */
     public function show(Shop $shop)
     {
-        
     }
 
     /**
@@ -92,4 +91,6 @@ class ShopController extends Controller
     {
         //
     }
+
+    
 }

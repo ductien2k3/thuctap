@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CartItem;
 use App\Models\Order;
+use App\Models\Shop_product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -45,7 +46,7 @@ class OrderController extends Controller
         // Tạo đối tượng Order mới
         $order = new Order();
         $order->user_id = $userId;
-
+    
         // Kết hợp first_name và last_name thành một chuỗi và gán vào trường name
         $name = $request->input('first_name') . ' ' . $request->input('last_name');
         $order->name = $name;
@@ -60,22 +61,31 @@ class OrderController extends Controller
         $order->status = 'Đang chờ xác nhận đơn hàng'; // Mặc định là đang chờ xác nhận
         $order->payment = $request->input('payment');
         $order->order_date = Carbon::now()->format('Y-m-d H:i:s');
-
-
         // Lưu đơn hàng vào cơ sở dữ liệu
         $order->save();
+        // Lấy danh sách các CartItem tương ứng với người dùng
+        $cartItems = CartItem::where('user_id', $userId)->get();
+        $products = [];
+        foreach ($cartItems as $cartItem) {
+            $productId = $cartItem->product_id;
+            $product = Shop_product::find($productId);
+            if ($product && $product->shop_category && $product->shop_category->shop) {
+                $shopId = $product->shop_category->shop->id;
+                $products[$productId] = [
+                    'quantity' => $cartItem->quantity,
+                    'shop_id' => $shopId,   
+                    // Thêm các thuộc tính khác của sản phẩm nếu cần thiết
+                ];
+            }
+        }
+        // Thêm liên kết giữa đơn hàng và sản phẩm với số lượng và thông tin khác
+        $order->shop_products()->attach($products);
+    
         CartItem::where('user_id', auth()->id())->delete();
-
-
-        // Xóa giỏ hàng trong session
-       
         // Chuyển hướng người dùng sau khi lưu thành công
         return redirect()->route('home.index')->with('success', 'Order created successfully');
     }
-
-
-
-
+    
 
     /**
      * Display the specified resource.

@@ -13,4 +13,8 @@ class Shop extends Model
     protected $fillable = ['name', 'address', 'image', 'phone_number', 'description', 'email', 'user_id'];
 
     // ...
+    public function orders()
+{
+    return $this->belongsToMany(Order::class);
+}
 }

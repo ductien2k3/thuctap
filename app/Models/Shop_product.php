@@ -21,4 +21,8 @@ class Shop_product extends Model
     public function shop_category(){
         return $this->belongsTo(related:Shop_category::class);
     }
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'order_product')->withPivot('quantity');
+    }
 }
